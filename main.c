@@ -7,6 +7,8 @@
 #include "rna_aminoacids/genetic_code.h"
 
 int main(int argc, char *argv[]) {
+
+    printf("Bioinformatics Pipeline Demo v1.0\n\n");
     if (argc < 2) {
         printf("Usage: %s <DNA_SEQUENCE>\n", argv[0]);
         return 1;
