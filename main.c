@@ -7,32 +7,37 @@
 
 int main() {
     char dnaSequence[] = "ATGCTAGCTA";
-    printf("Projeto 1: DNA para RNA\n");
-    printf("Sequência de DNA: %s\n", dnaSequence);
+    printf("Project 1: DNA to RNA\n");
+    printf("DNA sequence: %s\n", dnaSequence);
+
     char *rnaSequence = dnaToRna(dnaSequence);
-    printf("Sequência de RNA: %s\n\n", rnaSequence);
+    printf("RNA sequence: %s\n\n", rnaSequence);
     free(rnaSequence);
 
     char rnaComplementSequence[] = "AUGCUAGCUA";
-    printf("Projeto 2: Complemento de RNA\n");
-    printf("Sequência de RNA: %s\n", rnaComplementSequence);
+    printf("Project 2: RNA Complement\n");
+    printf("RNA sequence: %s\n", rnaComplementSequence);
+
     char *complement = complementRna(rnaComplementSequence);
-    printf("Complemento de RNA: %s\n\n", complement);
+    printf("RNA complement: %s\n\n", complement);
     free(complement);
 
     char rnaIdentificationSequence[] = "AUGCUAGCUAUAG";
-    printf("Projeto 3: Identificação de RNA\n");
-    printf("Sequência de RNA: %s\n", rnaIdentificationSequence);
+    printf("Project 3: RNA Identification\n");
+    printf("RNA sequence: %s\n", rnaIdentificationSequence);
+
     char identification = identifyRna(rnaIdentificationSequence);
-    printf("Identificação de RNA: %c\n\n", identification);
+    printf("RNA identification: %c\n\n", identification);
 
     struct GeneticCodeEntry code[64];
     initGeneticCode(code);
-    const char *rnaTranslationSequence = "AUGUUUUUCUGU"; 
-    printf("Projeto 4: Tradução de RNA para Aminoácidos\n");
-    printf("Sequência de RNA: %s\n", rnaTranslationSequence);
+
+    const char *rnaTranslationSequence = "AUGUUUUUCUGU";
+    printf("Project 4: RNA to Amino Acids Translation\n");
+    printf("RNA sequence: %s\n", rnaTranslationSequence);
+
     char *aminoAcids = rnaToAminoAcids(rnaTranslationSequence, code);
-    printf("Sequência de Aminoácidos: %s\n", aminoAcids);
+    printf("Amino acids sequence: %s\n", aminoAcids);
     free(aminoAcids);
 
     return 0;
